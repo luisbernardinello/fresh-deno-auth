@@ -10,12 +10,16 @@ const LoginPage = () => {
 
       const submitHandler = async()=>{
         try{
-          const response = await axiod.post('/api/aut/login', userData)
+          const response = await axiod.post('/api/auth/login', userData)
           if(response.status == 200) {
+              alert("Login sucessfully");
               localStorage.setItem("token", JSON.stringify(response.data.token));
               window.location.href = "/"
+          } else {
+            alert(response.data.error);
           }
       } catch (error) {
+          alert(error.response.data.error);
           console.error(error)
       }
       };
