@@ -1,9 +1,12 @@
-# Fresh project
+![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
+# Fresh Auth Pages :lemon:
+![fresh-deno-auth](https://socialify.git.ci/luisbernardinello/fresh-deno-auth/image?language=1&name=1&owner=1&pattern=Signal&theme=Light)
+## :t-rex: What will you find? :sauropod:
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+This repository contains a sample project of authentication pages with data handling using Fresh JS + Deno + MongoDB + TailwindCSS
 
-### Usage
+
+### Usage :t-rex::lemon:
 
 Make sure to install Deno: https://deno.land/manual/getting_started/installation
 
@@ -14,3 +17,13 @@ deno task start
 ```
 
 This will watch the project directory and restart as necessary.
+
+
+---
+
+### References
+- [1] [Fresh](https://fresh.deno.dev/docs/getting-started)
+
+
+---
+	

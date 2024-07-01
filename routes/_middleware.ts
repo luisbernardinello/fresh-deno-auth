@@ -6,11 +6,12 @@ export async function handler(req: Request, ctx: FreshContext) {
     const cookieName = 'auth'
     const cookies = getCookies(req.headers);
     const token = cookies[cookieName]
-    const url = new URL(req.url) // o pathname sera o path que o user visita
+    const url = new URL(req.url) // o pathname sera o path que o usuario visita
     if(token) {
         // verificar o token
-        const verifyToken = await decode(token);
+        const verifyToken: any = await decode(token);
         if(verifyToken) {
+            ctx.state.userData = verifyToken[1].payload; // esses dados podem ser acessados de qualquer lugar no projeto
             const nonProtectedRoutes = ['/login', '/register']
             if(nonProtectedRoutes.includes(url.pathname)) {
                 url.pathname = '/'
